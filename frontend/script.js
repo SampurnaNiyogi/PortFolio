@@ -37,10 +37,89 @@ fetch(`${API_BASE}/projects`)
                 <img src="${proj.image_url}" alt="${proj.title}" width = "100">
                 <h3>${proj.title}</h3>
                 <p>${proj.description}</p>
+                <div class="detailed-description">
+                    <p>${proj.detailed_description.replace(/\n/g, '<br>')}</p>
+                </div>
                 <a href="${proj.link}" target="_blank">View Project</a>
+            `;
+            div.addEventListener('click', (event) => {
+                // IMPORTANT: Only toggle if the user didn't click the link itself!
+                if (event.target.tagName !== 'A') {
+                    div.classList.toggle('active');
+                }
+            });
+            container.appendChild(div);
+        });
+    });
+
+fetch(`${API_BASE}/education`)
+    .then(res => res.json())
+    .then(educationList => {
+        const container = document.getElementById("education-container");
+        educationList.reverse();
+        educationList.forEach(edu => {
+            const div = document.createElement("div");
+            div.className = "project-card";
+            let disciplineHtml = '';
+            if (edu.discipline) {
+                disciplineHtml = `<p class="education-discipline">${edu.discipline}</p>`;
+            }
+            
+            div.innerHTML = `
+                <h3>${edu.degree}</h3>
+                ${disciplineHtml}
+                <p class="education-institution">${edu.institution}</p>
+                <p class="education-timeline">${edu.timeline}</p>
+                
             `;
             container.appendChild(div);
         });
     });
 
+fetch(`${API_BASE}/hobbies`)
+    .then(res => res.json())
+    .then(hobbies => {
+        const container = document.getElementById("hobbies-container");
+        hobbies.forEach(hobby => {
+            const div = document.createElement("div");
+            div.className = "hobby-card";
+            div.innerHTML = `
+                <h3>${hobby.name}</h3>
+                <p>${hobby.description}</p>
+            `;
+            container.appendChild(div);
+        });
+    });
 
+// Mobile Sidebar Toggle
+const menuToggle = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+const sidebarClose = document.getElementById('sidebarClose');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+// Open sidebar
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+});
+
+// Close sidebar
+sidebarClose.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+});
+
+// Close sidebar when clicking overlay
+sidebarOverlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+});
+
+// Close sidebar when clicking a link
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    });
+});

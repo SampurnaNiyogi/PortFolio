@@ -15,21 +15,54 @@
             <div class="logo">SN</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#tech-activity">Technical Activities</a></li>
                 <li><a href="#projects">Explore My Projects</a></li>
-                <li><a href="http://127.0.0.1:8000/resume/download" target ="_blank">Download Resume</a></li>
+                <li><a href="http://127.0.0.1:8000/resume/view" target ="_blank">Download Resume</a></li>
+                <li><a href="http://127.0.0.1:8000/resume/download" download>View Resume</a></li>
             </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
+    <!-- Mobile Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home" class="sidebar-link">Home</a></li>
+            <li><a href="#education" class="sidebar-link">Education</a></li>
+            <li><a href="#hobbies" class="sidebar-link">Hobbies</a></li>
+            <li><a href="#skills" class="sidebar-link">Skills</a></li>
+            <li><a href="#tech-activity" class="sidebar-link">Technical Activities</a></li>
+            <li><a href="#projects" class="sidebar-link">Explore My Projects</a></li>
+            <li><a href="http://127.0.0.1:8000/resume/view" target ="_blank">Download Resume</a></li>
+            <li><a href="http://127.0.0.1:8000/resume/download" download>View Resume</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>Hi! I am <span id="name">Loading...</span></h1>
-        <h3 id = "role">Loading...</h3>
-        <p id="about-me">Loading...</p>
+        <div class="hero-content">
+            <h1>Hi! I am <span id="name">Loading...</span></h1>
+            <h3 id="role">Loading...</h3>
+            <p id="about-me">Loading...</p>
+        </div>
+        <img src="./resources/PortfolioProfile.jpg" alt="Profile Photo" id="profile-pic">
+    </section>
+
+
+    <section id="education" class="education">
+        <h2>My Education</h2>
+        <div class="education-container" id="education-container">
+            <!-- Education details will be dynamically inserted -->
+        </div>
     </section>
 
     <!-- Skills Section -->
@@ -49,6 +82,118 @@
         </div>
     </section>
 
+    <section class="tech-section" id="tech-activity">
+  <h2 class="section-title">Technical Activities</h2>
+  <div class="tech-grid">
+
+    <div class="tech-card">
+      <div class="tech-icon">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <h3 class="tech-title">Personal Projects</h3>
+      <p class="tech-description">
+        Building full-stack applications to solve real-world problems and experiment with new technologies (e.g., FastAPI, Node.js, MongoDB).
+      </p>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">
+        <i class="fa-solid fa-microchip"></i>
+      </div>
+      <h3 class="tech-title">Hardware & IoT</h3>
+      <p class="tech-description">
+        Tinkering with microcontrollers like ESP32 and Arduino to bridge the gap between code and the physical world in smart device concepts.
+      </p>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-icon">
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <h3 class="tech-title">Open-Source</h3>
+      <p class="tech-description">
+        Actively learning by contributing to open-source projects, focusing on bug fixes and documentation to learn from community-driven codebases.
+      </p>
+    </div>
+    
+    <div class="tech-card">
+      <div class="tech-icon">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <h3 class="tech-title">Competitive Coding</h3>
+      <p class="tech-description">
+        Solving algorithmic challenges and participating in hackathons to strengthen my problem-solving skills and rapid-prototyping abilities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <section id="hobbies" class="hobbies">
+        <h2 class="section-title">Hobbies & Interests</h2>
+  <div class="hobbies-grid">
+
+    <div class="hobby-card">
+      <h3 class="hobby-title">Strategic Thinking</h3>
+      <p class="hobby-description">
+        Engaging in online chess to sharpen logical reasoning, pattern recognition, and strategic planning.
+      </p>
+    </div>
+
+    <div class="hobby-card">
+      <h3 class="hobby-title">Creative Focus</h3>
+      <p class="hobby-description">
+        Practicing Mandala art as a form of mindfulness that cultivates patience, precision, and attention to detail.
+      </p>
+    </div>
+
+    <div class="hobby-card">
+      <h3 class="hobby-title">Active Teamwork</h3>
+      <p class="hobby-description">
+        Playing badminton regularly for physical fitness, agility, and to practice collaboration in a team setting.
+      </p>
+    </div>
+
+  </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <h2>My Certifications</h2>
+        <div class="certifications-container" id="certifications-container">
+            
+            <div class="project-card">
+                <h5>CSS Hackerank(Basic)</h5>
+                <img src="./resources/cssBasic.jpg" alt="CSS Hackerank(Basic)">
+            </div>
+
+            <div class="project-card">
+                <h5>GDG Study Jam 2024</h5>
+                <img src="./resources/gdgStudyJam.jpg" alt="GDG Study Jam 2024">
+            </div>
+
+            <div class="project-card">
+                <h5>Postman API Certificate</h5>
+                <img src="./resources/postman.jpg" alt="Postman API Certificate">
+            </div>
+            <div class="project-card">
+                <h5>Problem Solving Hackerrank(Basic)</h5>
+                <img src="./resources/problemSolvingBasic.jpg" alt="Problem Solving Hackerrank(Basic)">
+            </div>
+            <div class="project-card">
+                <h5>SQL Hackerrank (Basic)</h5>
+                <img src="./resources/sqlBasic.jpg" alt="SQL Hackerrank (Basic)">
+            </div>
+            </div>
+
+    </section>
+    <section class="download-resume-container">
+        <a href="http://127.0.0.1:8000/resume/view" class="btn-download-main" target="_blank">
+            Download My Resume
+        </a>
+        <a href="http://127.0.0.1:8000/resume/download" class="btn-download-main" download>
+            View My Resume
+        </a>
+    </section>
     <!-- Footer -->
     <footer>
         <div class="contact">
@@ -56,8 +201,8 @@
             <p>Email: <span id="email"></span></p>
         </div>
         <div class="social">
-            <a id="linkedin" href="#" target="_blank" id = "linkedin"><i class="fab fa-linkedin"></i></a>
-            <a id="github" href="#" target="_blank" id = "github"><i class="fab fa-github"></i></a>
+            <a id="linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a id="github" href="#" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 
