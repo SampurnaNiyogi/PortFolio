@@ -4,11 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Any, List
 import os
 from bson import ObjectId
-from config import db, fs
-from gridfs import GridFS
-from io import BytesIO
-from starlette.responses import StreamingResponse
-from pdf2image import convert_from_bytes
+from config import db
 from fastapi.middleware.cors import CORSMiddleware
 
 def serialize_doc(doc: dict) -> dict:
