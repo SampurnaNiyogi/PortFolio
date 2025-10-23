@@ -25,7 +25,7 @@ app = FastAPI()
 # Allow all origins (for local dev)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://portfolio-sampurna-theta.vercel.app/"],
+    allow_origins=["https://portfolio-sampurna-theta.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
