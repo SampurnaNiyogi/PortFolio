@@ -74,7 +74,7 @@ def get_projects():
 @app.get("/resume/download")
 async def download_resume():
     """View resume inline in browser."""
-    resume_path = os.path.join("static", "resume.pdf")
+    resume_path = os.path.join("static", "ResumeByLatex.pdf")
     if os.path.exists(resume_path):
         return FileResponse(
             resume_path,
@@ -86,7 +86,7 @@ async def download_resume():
 @app.get("/resume/view")
 async def view_resume():
     """Force download of resume."""
-    resume_path = os.path.join("static", "resume.pdf")
+    resume_path = os.path.join("static", "ResumeByLatex.pdf")
     if os.path.exists(resume_path):
         return FileResponse(
             resume_path,
