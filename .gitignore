@@ -1,5 +1,4 @@
 venv/
 .env
 ./resources/
-backend/static/
 backend/__pycache__/
