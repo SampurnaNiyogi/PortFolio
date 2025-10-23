@@ -4,6 +4,13 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 header {
@@ -12,6 +19,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav {
@@ -31,6 +40,10 @@ nav .logo {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     padding: 0 2rem 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .skill-card,
@@ -48,7 +61,6 @@ nav .logo {
 .skill-card:hover {
     transform: translateY(-5px);
 }
-
 
 nav ul {
     list-style: none;
@@ -73,6 +85,9 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .hero-content {
@@ -334,6 +349,11 @@ h2:after {
 /* Add scroll-margin to all sections for proper anchor positioning */
 section {
     scroll-margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Special handling for tech-section */
@@ -409,6 +429,7 @@ section {
     padding: 2px;
     background: linear-gradient(45deg, #bb86fc, #7c4dff, #bb86fc);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
@@ -456,6 +477,9 @@ section {
 #hobbies {
     padding: 4rem 0;
     background: radial-gradient(circle at center, rgba(100, 0, 150, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 #hobbies .section-title {
@@ -591,6 +615,9 @@ footer {
     position: relative;
     overflow: hidden;
     border-top: 2px solid #bb86fc;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 /* Decorative background effect */
@@ -866,6 +893,8 @@ footer::before {
         padding: 0 1rem 2rem;
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .skill-card,
@@ -888,7 +917,8 @@ footer::before {
     .tech-section {
         width: 100%;
         padding: 2rem 0;
-        margin: 2rem auto;
+        margin: 2rem 0;
+        box-sizing: border-box;
     }
 
     .tech-grid {
@@ -948,6 +978,18 @@ footer::before {
         gap: 2rem;
         padding: 2rem 1rem;
         text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    
+    header {
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    nav {
+        width: 100%;
+        padding: 0;
     }
 
     .contact {
@@ -995,8 +1037,11 @@ footer::before {
 
     .download-resume-container {
         padding: 2rem 1rem;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        background-color: #0b0014;
     }
-
     .btn-download-main {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
@@ -1007,13 +1052,11 @@ footer::before {
         margin: 0.5rem auto;
     }
 }
-
 .download-resume-container {
     text-align: center;
     padding: 4rem 2rem; 
     background-color: #0b0014;
 }
-
 .btn-download-main {
     display: inline-block;
     padding: 1rem 2.5rem;

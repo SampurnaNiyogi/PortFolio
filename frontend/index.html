@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sampurna Niyogi | Portfolio</title>
+    <link rel="icon" href="./resources/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -20,8 +21,8 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#tech-activity">Technical Activities</a></li>
                 <li><a href="#projects">Explore My Projects</a></li>
-                <li><a href="http://127.0.0.1:8000/resume/view" target ="_blank">Download Resume</a></li>
-                <li><a href="http://127.0.0.1:8000/resume/download" download>View Resume</a></li>
+                <li><a href="/resume/view" target ="_blank">Download Resume</a></li>
+                <li><a href="/resume/download" download class="view-resume-link">View Resume</a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -42,8 +43,8 @@
             <li><a href="#skills" class="sidebar-link">Skills</a></li>
             <li><a href="#tech-activity" class="sidebar-link">Technical Activities</a></li>
             <li><a href="#projects" class="sidebar-link">Explore My Projects</a></li>
-            <li><a href="http://127.0.0.1:8000/resume/view" target ="_blank">Download Resume</a></li>
-            <li><a href="http://127.0.0.1:8000/resume/download" download>View Resume</a></li>
+            <li><a href="/resume/view" target ="_blank">Download Resume</a></li>
+            <li><a href="/resume/download" download class="view-resume-link">View Resume</a></li>
         </ul>
     </div>
 
@@ -131,7 +132,7 @@
 
     <section id="hobbies" class="hobbies">
         <h2 class="section-title">Hobbies & Interests</h2>
-  <div class="hobbies-grid">
+  <div class="hobbies-grid" id="hobbies-container">
 
     <div class="hobby-card">
       <h3 class="hobby-title">Strategic Thinking</h3>
@@ -187,10 +188,10 @@
 
     </section>
     <section class="download-resume-container">
-        <a href="http://127.0.0.1:8000/resume/view" class="btn-download-main" target="_blank">
+        <a href="/resume/view" class="btn-download-main" target="_blank">
             Download My Resume
         </a>
-        <a href="http://127.0.0.1:8000/resume/download" class="btn-download-main" download>
+        <a href="/resume/download" class="btn-download-main view-resume-link" download>
             View My Resume
         </a>
     </section>

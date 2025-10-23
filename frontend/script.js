@@ -1,8 +1,36 @@
-const API_BASE = "http://127.0.0.1:8000"; // Backend URL
+const API_BASE = "http://192.168.29.83:8000"; // Backend URL
+
+
+function isMobileDevice() {
+    // A simple check for common mobile user agents
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (isMobileDevice()) {
+        
+        const viewLinks = document.querySelectorAll('.view-resume-link');
+        
+        const downloadUrl = `${API_BASE}/resume/view`;
+
+        viewLinks.forEach(link => {
+            link.href = downloadUrl;
+            
+            link.setAttribute('target', '_blank');
+            link.setAttribute('download', 'resume.pdf');
+        });
+    }
+});
 
 // Load Profile
 fetch(`${API_BASE}/profile`)
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
     .then(data => {
         document.getElementById("name").innerText = data.name || "Sampurna Niyogi";
         document.getElementById("role").innerText = data.role || "Software Engineer";
@@ -10,6 +38,10 @@ fetch(`${API_BASE}/profile`)
         document.getElementById("email").innerText = data.email || "";
         document.getElementById("linkedin").href = data.linkedin || "#";
         document.getElementById("github").href = data.github || "#";
+    })
+    .catch(error => {
+        console.error('Failed to fetch profile:', error);
+        document.getElementById("name").innerText = "Error loading data";
     });
 
 // Load Skills
@@ -76,20 +108,6 @@ fetch(`${API_BASE}/education`)
         });
     });
 
-fetch(`${API_BASE}/hobbies`)
-    .then(res => res.json())
-    .then(hobbies => {
-        const container = document.getElementById("hobbies-container");
-        hobbies.forEach(hobby => {
-            const div = document.createElement("div");
-            div.className = "hobby-card";
-            div.innerHTML = `
-                <h3>${hobby.name}</h3>
-                <p>${hobby.description}</p>
-            `;
-            container.appendChild(div);
-        });
-    });
 
 // Mobile Sidebar Toggle
 const menuToggle = document.getElementById('menuToggle');
