@@ -7,10 +7,31 @@
     <link rel="icon" href="./resources/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .social .fas {
+            font-size: 28px;
+            color: #e9dff5;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .social a:hover .fas {
+            color: #fff;
+            transform: rotate(360deg);
+        }
+        /* LeetCode Hover Color (Orange) */
+        .social a:hover .fa-code {
+            color: #ffa116;
+        }
+        /* Codolio Hover Color (Green/Teal) */
+        .social a:hover .fa-chart-line {
+            color: #45cb85;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <header>
         <nav>
             <div class="logo">SN</div>
@@ -30,7 +51,6 @@
         </nav>
     </header>
 
-    <!-- Mobile Sidebar -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="sidebar" id="sidebar">
         <button class="sidebar-close" id="sidebarClose">
@@ -48,130 +68,197 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hi! I am <span id="name">Loading...</span></h1>
-            <h3 id="role">Loading...</h3>
-            <p id="about-me">Loading...</p>
+            <h1>Hi! I am <span id="name">Sampurna Niyogi</span></h1>
+            <h3 id="role">Backend Developer | AI Enthusiast</h3>
+            <p id="about-me">
+                I'm a B.Tech student in Computer Science Engineering at Heritage Institute of Technology, Kolkata. I've always been drawn to the 'why' behind how things work—especially in tech. Over time, that curiosity grew into a love for both back-end development and AI. I enjoy building systems that are not just functional, but meaningful—tools that can actually help solve real-world challenges.
+            </p>
         </div>
         <img src="./resources/PortfolioProfile.jpg" alt="Profile Photo" id="profile-pic">
     </section>
 
-
     <section id="education" class="education">
         <h2>My Education</h2>
         <div class="education-container" id="education-container">
-            <!-- Education details will be dynamically inserted -->
+            
+            <div class="project-card">
+                <h3>B.Tech in Computer Science and Engineering</h3>
+                <p class="education-institution">Heritage Institute Of Technology, Kolkata</p>
+                <p class="education-timeline">2024 - 2028 (Expected)</p>
+                <p class="education-discipline">CGPA: 9.84</p>
+            </div>
+
+            <div class="project-card">
+                <h3>AISSCE (Science Stream)</h3>
+                <p class="education-institution">Bhavan's Gangabux Kanoria Vidyamandir</p>
+                <p class="education-timeline">2024</p>
+                <p class="education-discipline">Percentage: 95%</p>
+            </div>
+
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>My Skills</h2>
         <div class="skills-container" id="skills-container">
-            <!-- Skills will be dynamically inserted -->
+            
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Frontend Technologies</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Vue/Vuetify</li>
+                    <li>Streamlit</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Flask</li>
+                    <li>Django</li>
+                    <li>FastAPI</li>
+                    <li>Express.js</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Database Management</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>SQLite</li>
+                    <li>Mongoose</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>APIs/Services</h3>
+                <ul>
+                    <li>Twilio</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>AI/Machine Learning</h3>
+                <ul>
+                    <li>Transformers</li>
+                    <li>PyTorch</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Blockchain Technologies</h3>
+                <ul>
+                    <li>Hyperledger Fabric</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Version Control / Tools</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Postman</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Team Communication</li>
+                    <li>Adaptability</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Explore Projects</h2>
         <div class="projects-container" id="projects-container">
-            <!-- Project cards will be inserted dynamically -->
-        </div>
+            </div>
     </section>
 
     <section class="tech-section" id="tech-activity">
-  <h2 class="section-title">Technical Activities</h2>
-  <div class="tech-grid">
-
-    <div class="tech-card">
-      <div class="tech-icon">
-        <i class="fa-solid fa-code"></i>
+      <h2 class="section-title">Technical Activities</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="tech-title">Personal Projects</h3>
+          <p class="tech-description">Building full-stack applications to solve real-world problems and experiment with new technologies.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3 class="tech-title">Hardware & IoT</h3>
+          <p class="tech-description">Tinkering with microcontrollers like ESP32 and Arduino to bridge the gap between code and the physical world.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon"><i class="fa-brands fa-github"></i></div>
+          <h3 class="tech-title">Open-Source</h3>
+          <p class="tech-description">Actively learning by contributing to open-source projects, focusing on bug fixes and documentation.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3 class="tech-title">Competitive Coding</h3>
+          <p class="tech-description">Solving algorithmic challenges and participating in hackathons to strengthen problem-solving skills.</p>
+        </div>
       </div>
-      <h3 class="tech-title">Personal Projects</h3>
-      <p class="tech-description">
-        Building full-stack applications to solve real-world problems and experiment with new technologies (e.g., FastAPI, Node.js, MongoDB).
-      </p>
-    </div>
-
-    <div class="tech-card">
-      <div class="tech-icon">
-        <i class="fa-solid fa-microchip"></i>
-      </div>
-      <h3 class="tech-title">Hardware & IoT</h3>
-      <p class="tech-description">
-        Tinkering with microcontrollers like ESP32 and Arduino to bridge the gap between code and the physical world in smart device concepts.
-      </p>
-    </div>
-
-    <div class="tech-card">
-      <div class="tech-icon">
-        <i class="fa-brands fa-github"></i>
-      </div>
-      <h3 class="tech-title">Open-Source</h3>
-      <p class="tech-description">
-        Actively learning by contributing to open-source projects, focusing on bug fixes and documentation to learn from community-driven codebases.
-      </p>
-    </div>
-    
-    <div class="tech-card">
-      <div class="tech-icon">
-        <i class="fa-solid fa-laptop-code"></i>
-      </div>
-      <h3 class="tech-title">Competitive Coding</h3>
-      <p class="tech-description">
-        Solving algorithmic challenges and participating in hackathons to strengthen my problem-solving skills and rapid-prototyping abilities.
-      </p>
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <section id="hobbies" class="hobbies">
         <h2 class="section-title">Hobbies & Interests</h2>
-  <div class="hobbies-grid" id="hobbies-container">
-
-    <div class="hobby-card">
-      <h3 class="hobby-title">Strategic Thinking</h3>
-      <p class="hobby-description">
-        Engaging in online chess to sharpen logical reasoning, pattern recognition, and strategic planning.
-      </p>
-    </div>
-
-    <div class="hobby-card">
-      <h3 class="hobby-title">Creative Focus</h3>
-      <p class="hobby-description">
-        Practicing Mandala art as a form of mindfulness that cultivates patience, precision, and attention to detail.
-      </p>
-    </div>
-
-    <div class="hobby-card">
-      <h3 class="hobby-title">Active Teamwork</h3>
-      <p class="hobby-description">
-        Playing badminton regularly for physical fitness, agility, and to practice collaboration in a team setting.
-      </p>
-    </div>
-
-  </div>
+        <div class="hobbies-grid" id="hobbies-container">
+            <div class="hobby-card">
+              <h3 class="hobby-title">Strategic Thinking</h3>
+              <p class="hobby-description">Engaging in online chess to sharpen logical reasoning, pattern recognition, and strategic planning.</p>
+            </div>
+            <div class="hobby-card">
+              <h3 class="hobby-title">Creative Focus</h3>
+              <p class="hobby-description">Practicing Mandala art as a form of mindfulness that cultivates patience, precision, and attention to detail.</p>
+            </div>
+            <div class="hobby-card">
+              <h3 class="hobby-title">Active Teamwork</h3>
+              <p class="hobby-description">Playing badminton regularly for physical fitness, agility, and to practice collaboration in a team setting.</p>
+            </div>
+        </div>
     </section>
 
     <section id="certifications" class="certifications">
         <h2>My Certifications</h2>
         <div class="certifications-container" id="certifications-container">
-            
             <div class="project-card">
-                <h5>CSS Hackerank(Basic)</h5>
-                <img src="./resources/cssBasic.jpg" alt="CSS Hackerank(Basic)">
+                <h5>Introduction To Internet of Things, NPTEL</h5>
+                <img src="./resources/iotNPTEL.jpg" alt="NPTEL Intoduction to IOT">
             </div>
-
             <div class="project-card">
                 <h5>GDG Study Jam 2024</h5>
                 <img src="./resources/gdgStudyJam.jpg" alt="GDG Study Jam 2024">
             </div>
-
+            <div class="project-card">
+                <h5>Software Intern Hackerank</h5>
+                <img src="./resources/softwareintern.jpg" alt="Software Intern Hackerank">
+            </div>
+            <div class="project-card">
+                <h5>CSS Hackerank(Basic)</h5>
+                <img src="./resources/cssBasic.jpg" alt="CSS Hackerank(Basic)">
+            </div>
             <div class="project-card">
                 <h5>Postman API Certificate</h5>
                 <img src="./resources/postman.jpg" alt="Postman API Certificate">
@@ -184,26 +271,24 @@
                 <h5>SQL Hackerrank (Basic)</h5>
                 <img src="./resources/sqlBasic.jpg" alt="SQL Hackerrank (Basic)">
             </div>
-            </div>
+        </div>
+    </section>
 
-    </section>
     <section class="download-resume-container">
-        <a href="https://my-portfolio-backend-yd8u.onrender.com/resume/view" class="btn-download-main" target="_blank">
-            Download My Resume
-        </a>
-        <a href="https://my-portfolio-backend-yd8u.onrender.com/resume/download" class="btn-download-main view-resume-link" download>
-            View My Resume
-        </a>
+        <a href="https://my-portfolio-backend-yd8u.onrender.com/resume/view" class="btn-download-main" target="_blank">Download My Resume</a>
+        <a href="https://my-portfolio-backend-yd8u.onrender.com/resume/download" class="btn-download-main view-resume-link" download>View My Resume</a>
     </section>
-    <!-- Footer -->
+
     <footer>
         <div class="contact">
             <span class = "contact-container">Contact Me<br> Want to collaborate with me?</span>
-            <p>Email: <span id="email"></span></p>
+            <p>Email: <span id="email">sampurna.niyogi06@gmail.com</span></p>
         </div>
         <div class="social">
-            <a id="linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a id="github" href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a id="linkedin" href="https://linkedin.com/in/sampurnaniyogi39" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a id="github" href="https://github.com/SampurnaNiyogi" target="_blank"><i class="fab fa-github"></i></a>
+            <a id="leetcode" href="https://leetcode.com/u/SampurnaNiyogi/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+            <a id="codolio" href="https://codolio.com/profile/SampurnaNiyogi" target="_blank" title="Codolio"><i class="fas fa-chart-line"></i></a>
         </div>
     </footer>
 
