@@ -1,28 +1,14 @@
-const API_BASE = "https://my-portfolio-backend-yd8u.onrender.com"; // Backend URL
+const API_BASE = "https://my-portfolio-backend-yd8u.onrender.com"; // Backend URL (kept just in case)
 
 function isMobileDevice() {
-    // A simple check for common mobile user agents
     return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (isMobileDevice()) {
-        const viewLinks = document.querySelectorAll('.view-resume-link');
-        const downloadUrl = `${API_BASE}/resume/view`;
-
-        viewLinks.forEach(link => {
-            link.href = downloadUrl;
-            link.setAttribute('target', '_blank');
-            link.setAttribute('download', 'resume.pdf');
-        });
-    }
-    
-    // Initialize projects with static data
+    // Resume links are now handled purely by HTML in index.html
+    // We only need to load the projects here.
     loadProjects();
 });
-
-// --- REMOVED PROFILE, SKILLS, AND EDUCATION FETCH CALLS ---
-// These are now static in HTML. Removing the fetch calls stops the "Error loading data" message.
 
 function loadProjects() {
     // Static Project Data
@@ -110,7 +96,6 @@ function loadProjects() {
         container.appendChild(div);
     });
 }
-
 
 // Mobile Sidebar Toggle
 const menuToggle = document.getElementById('menuToggle');
