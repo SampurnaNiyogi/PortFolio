@@ -120,12 +120,33 @@ Django REST Framework, React.js, PyQt5, Pandas, SQLite, JWT<br><br>
 • Built web and desktop dashboards for real-time visualization.<br>
 • Implemented automated PDF reporting for operational analysis.
 `
+        },
+        {
+            title: "Developer Learning Platform (Backend)",
+            description: "Backend services for a developer learning platform inspired by competitive coding platforms.",
+            image_url: "https://res.cloudinary.com/djw8w0yxl/image/upload/v1766000000/dev_learning_platform_placeholder.png",
+            link: "https://github.com/SampurnaNiyogi/dev-learning-platform-backend",
+            detailed_description: `
+        <strong>Problem it solves</strong><br>
+        Learning platforms often lack clean backend design for scalable problem management and user workflows.<br><br>
+
+        <strong>Tech Stack</strong><br>
+        Java, Spring Boot, REST APIs, Git, GitHub<br><br>
+
+        <strong>What I built</strong><br>
+        • Designed layered backend architecture (Controller → Service → DTO).<br>
+        • Built RESTful APIs for problem management and user workflows.<br>
+        • Focused on clean API contracts, validation, and extensibility.<br><br>
+
+        <strong>Status</strong><br>
+        In Progress
+        `
         }
     ];
 
     const featuredTitles = [
         "Chemical Plant Equipment Monitor",
-        "ShieldNET: AI-Powered WAF",
+        "Developer Learning Platform (Backend)",
         "Smart Recipe",
         "AI-based self-checkout system"
     ];
