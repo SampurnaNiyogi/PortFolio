@@ -124,8 +124,8 @@ Django REST Framework, React.js, PyQt5, Pandas, SQLite, JWT<br><br>
         {
             title: "Developer Learning Platform (Backend)",
             description: "Backend services for a developer learning platform inspired by competitive coding platforms.",
-            image_url: "https://res.cloudinary.com/djw8w0yxl/image/upload/v1766000000/dev_learning_platform_placeholder.png",
-            link: "https://github.com/SampurnaNiyogi/dev-learning-platform-backend",
+            image_url: "https://res.cloudinary.com/djw8w0yxl/image/upload/v1766310885/Dev-learning-platform_jsa2k1.jpg",
+            link: "https://github.com/SampurnaNiyogi/dev-learning-platform",
             detailed_description: `
         <strong>Problem it solves</strong><br>
         Learning platforms often lack clean backend design for scalable problem management and user workflows.<br><br>
