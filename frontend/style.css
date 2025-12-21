@@ -34,8 +34,7 @@ nav .logo {
     font-size: 1.5rem;
 }
 
-.skills-container,
-.projects-container {
+.skills-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
@@ -44,6 +43,17 @@ nav .logo {
     max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 0 2rem 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-items: center;
 }
 
 .skill-card,
@@ -271,13 +281,29 @@ h2:after {
 }
 
 .detailed-description p {
-    font-size: 0.95rem;
+    font-size: 1.00rem;
     color: #e0e0e0;
     line-height: 1.6;
     border-top: 2px solid #bb86fc;
     padding-top: 15px;
     margin: 0;
 }
+
+/* ===== Project detailed description font tuning ===== */
+.detailed-description {
+    font-size: 0.9rem;        /* override large card font */
+    line-height: 1.55;
+}
+
+.detailed-description strong {
+    font-size: 0.95rem;
+    color: #bb86fc;
+}
+
+.detailed-description br {
+    line-height: 1.2;
+}
+
 
 .project-card a:hover {
     background-color: #9d6fd8;
@@ -1077,4 +1103,53 @@ footer::before {
 .btn-download-main:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(187, 134, 252, 0.5);
+}
+
+/* ==================== CERTIFICATE MODAL ==================== */
+.certificate-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+.certificate-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(187, 134, 252, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #bb86fc;
 }
